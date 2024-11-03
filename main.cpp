@@ -1,8 +1,11 @@
 #include <iostream>
 #include <Initial.h>
 #include <Card.h>
+#include <Poker.h>
+#include <vector>
 int main(){
-    Card c1{Diamond,King};
-    c1.print_suit();
-    c1.print_number();
+    Poker p1;
+    //c1.push_back()
+    return 0;
 }
+

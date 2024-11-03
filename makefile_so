@@ -1,0 +1,13 @@
+SRC=main.cpp
+TARGET=./bin/a.out
+all:main.cpp libcard.so libpoker.so
+	g++ ${SRC} -I./include -L./bin -lcard -lpoker -o ${TARGET}
+	${TARGET}
+libpoker.so:./src/Poker.cpp libcard.so
+	g++ ./src/Poker.cpp -shared -fPIC -o ./bin/libpoker.so	-I./include -L./bin -lcard
+libcard.so:./src/Card.cpp
+	g++ ./src/Card.cpp -shared -fPIC -o ./bin/libcard.so -I./include
+clear:
+	rm -f ./bin/*
+	rm -f ./tmp/*
+	rm -f ./lib/*

@@ -1,13 +1,25 @@
 #include <iostream>
 #include <Card.h>
+
+Card::Card()=default;
+
 Card::Card(SuitInPoker suit, NumberInPoker number):_suit(suit),_number(number){};
+
 Card::Card(const Card& card){
         _suit = card._suit;
         _number = card._number;
     }
+
+Card Card::operator=(const Card &that){
+    this->_suit = that._suit;
+    this->_number = that._number;
+    return *this;
+}
+
 void Card::show(){
     std::cout << _suit << "\n" << _number << "\n";
 }
+
 void Card::print_suit(){
     switch(_suit){
         case Spade:
