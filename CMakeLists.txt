@@ -3,7 +3,7 @@ cmake_minimum_required (VERSION 3.8)
 project ("poker_game")
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
-set_property(TARGET CMakeProject1 PROPERTY CXX_STANDARD 11)
+set_property(TARGET poker_game PROPERTY CXX_STANDARD 11)
 
 # 获取src文件夹下所有的.cpp文件
 aux_source_directory(${PROJECT_SOURCE_DIR}/src SOURCES)
