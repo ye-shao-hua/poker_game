@@ -18,3 +18,7 @@ target_include_directories(poker_game PRIVATE
   ${PROJECT_SOURCE_DIR}/include
 )
 set_property(TARGET poker_game PROPERTY CXX_STANDARD 11)
+
+# 启用测试
+enable_testing()
+add_test(NAME MainTest COMMAND poker_game)
