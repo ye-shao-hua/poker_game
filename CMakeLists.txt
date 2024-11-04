@@ -8,7 +8,7 @@ set_property(TARGET CMakeProject1 PROPERTY CXX_STANDARD 11)
 # 获取src文件夹下所有的.cpp文件
 aux_source_directory(${PROJECT_SOURCE_DIR}/src SOURCES)
 add_library (poker_game_dll SHARED ${SOURCES})
-target_include_directories(parenthesisExpression PRIVATE
+target_include_directories(poker_game_dll PRIVATE
   ${PROJECT_SOURCE_DIR}/include
 )
 
